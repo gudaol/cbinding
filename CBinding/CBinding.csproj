@@ -109,6 +109,7 @@
     <Folder Include="Gui\" />
     <Folder Include="ProjectPad\" />
     <Folder Include="Refactoring\" />
+    <Folder Include="Tests\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Posix" />
@@ -182,6 +183,9 @@
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <Package>gtk-sharp-2.0</Package>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Project\CProject.cs" />
@@ -252,6 +256,19 @@
     <Compile Include="Parser\CDocumentParser.cs" />
     <Compile Include="Gui\RenameHandlerDialog.cs" />
     <Compile Include="gtk-gui\CBinding.RenameHandlerDialog.cs" />
+    <Compile Include="Tests\Tests.cs" />
+    <Compile Include="Tests\TestCompletionWidget.cs" />
+    <Compile Include="Tests\TestCTextEditorExtension.cs" />
+    <Compile Include="Tests\TestViewContent.cs" />
+    <Compile Include="Tests\TestBase.cs" />
+    <Compile Include="Tests\TestWorkBenchWindow.cs" />
+    <Compile Include="Tests\Util.cs" />
+    <Compile Include="Tests\ITextDocumentWrapper.cs" />
+    <Compile Include="Tests\DocumentLineWrapper.cs" />
+    <Compile Include="Tests\ReadOnlyDocumentSnapshot.cs" />
+    <Compile Include="Tests\TextSourceVersionWrapper.cs" />
+    <Compile Include="Tests\TextChangeEventArgsWrapper.cs" />
+    <Compile Include="Tests\RopeTestSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <AddinReference Include="MonoDevelop.Deployment" />
