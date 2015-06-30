@@ -171,9 +171,9 @@ namespace CBinding
 			content.Text = text;
 			content.CursorPosition = System.Math.Max (0, endPos);
 
-			var project = MonoDevelop.Projects.Services.ProjectService.CreateProject ("C#");
+			var project = MonoDevelop.Projects.Services.ProjectService.CreateProject ("C/C++");
 			project.Name = "test";
-			project.FileName = "test.csproj";
+			project.FileName = "test.cproj";
 			project.Files.Add (new ProjectFile (content.ContentName, BuildAction.Compile)); 
 
 			var solution = new MonoDevelop.Projects.Solution ();
@@ -203,7 +203,7 @@ namespace CBinding
 			listWindow.CompletionWidget = widget;
 			listWindow.CodeCompletionContext = widget.CurrentCodeCompletionContext;
 			var sm = ext.DocumentContext.ParsedDocument.GetAst<SemanticModel> ();
-
+			/*
 			var t = sm.Compilation.GetTypeByMetadataName (type); 
 			var foundMember = t.GetMembers().First (m => m.Name == member);
 			var factory = new RoslynCodeCompletionFactory (ext, sm);
@@ -211,7 +211,7 @@ namespace CBinding
 			data.DisplayFlags |= DisplayFlags.NamedArgument;
 			KeyActions ka = KeyActions.Process;
 			data.InsertCompletionText (listWindow, ref ka, KeyDescriptor.FromGtk (key, (char)key, Gdk.ModifierType.None)); 
-
+*/
 			return widget.CompletedWord;
 		}
 
