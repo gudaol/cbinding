@@ -1,4 +1,4 @@
-﻿//
+//
 // TestWorkbenchWindow.cs
 //
 // Author:
@@ -27,8 +27,6 @@
 //
 
 using System;
-using System.Collections;
-
 using MonoDevelop.Ide.Gui;
 using System.Collections.Generic;
 using Mono.Addins;
@@ -46,12 +44,12 @@ namespace CBinding
 				title = value;
 			}
 		}
-
+		
 		public string DocumentType {
 			get { return ""; }
 			set {}
 		}
-
+		
 		public Document Document {
 			get;
 			set;
@@ -61,33 +59,32 @@ namespace CBinding
 			get { return false; }
 			set {}
 		}
-
-		IViewContent viewContent;
+		
 		public IViewContent ViewContent {
-			get { return viewContent; }
-			set { viewContent = value; }
+			get;
+			set;
 		}
 
 		public ExtensionContext ExtensionContext {
 			get { return AddinManager.AddinEngine; }
 		}
-
+		
 		public IEnumerable<IAttachableViewContent> SubViewContents { get { return new IAttachableViewContent[0]; } }
 
 		public IBaseViewContent ActiveViewContent {
 			get { return ViewContent;}
 			set {}
 		}
-
+		
 		public bool CloseWindow (bool force)
 		{
 			return true;
 		}
-
+		
 		public void SelectWindow ()
 		{
 		}
-
+		
 		public void SwitchView (int viewNumber)
 		{
 		}
@@ -98,20 +95,20 @@ namespace CBinding
 		public void SwitchToSingleMode ()
 		{
 		}
-
+		
 		public int FindView<T> ()
 		{
 			return -1;
 		}
-
+		
 		public void AttachViewContent (IAttachableViewContent subViewContent)
 		{
-
+			
 		}
 
 		public void InsertViewContent (int index, IAttachableViewContent subViewContent)
 		{
-
+			
 		}
 
 		public DocumentToolbar GetToolbar (IBaseViewContent targetView)

@@ -134,10 +134,6 @@
       <HintPath>..\..\monodevelop\main\build\bin\Mono.TextEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="MonoDevelop.AddinMaker">
-      <HintPath>..\..\MonoDevelop.AddinMaker\bin\Debug\MonoDevelop.AddinMaker.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="MonoDevelop.Core">
       <HintPath>..\..\monodevelop\main\build\bin\MonoDevelop.Core.dll</HintPath>
       <Private>False</Private>
@@ -261,7 +257,6 @@
     <Compile Include="Tests\TestCTextEditorExtension.cs" />
     <Compile Include="Tests\TestViewContent.cs" />
     <Compile Include="Tests\TestBase.cs" />
-    <Compile Include="Tests\TestWorkBenchWindow.cs" />
     <Compile Include="Tests\Util.cs" />
     <Compile Include="Tests\ITextDocumentWrapper.cs" />
     <Compile Include="Tests\DocumentLineWrapper.cs" />
@@ -269,6 +264,7 @@
     <Compile Include="Tests\TextSourceVersionWrapper.cs" />
     <Compile Include="Tests\TextChangeEventArgsWrapper.cs" />
     <Compile Include="Tests\RopeTestSource.cs" />
+    <Compile Include="Tests\TestWorkbenchWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <AddinReference Include="MonoDevelop.Deployment" />
